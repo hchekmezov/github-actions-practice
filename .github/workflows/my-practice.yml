@@ -15,11 +15,16 @@ jobs:
     steps:
       - name: Print Hello Message
         run: echo "Hello, World from Testing"
+        
       - name: Execute few commands
         run: | 
           echo "Hello msg1!"
           echo "Hello msg2!"
           echo "Application name: ${{ env.APPLICATION_NAME }}"
+        
+      - name: Git clone my repo
+        uses: actions/checkout@v2   
+        
       - name: List current folder
         run : ls -la
       
