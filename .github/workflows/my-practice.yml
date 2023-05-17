@@ -20,6 +20,8 @@ jobs:
           echo "Hello msg1!"
           echo "Hello msg2!"
           echo "Application name: ${{ env.APPLICATION_NAME }}"
+      - name: List current folder
+        run : ls -la
       
   my-deploy:
     needs: [my-testing]
